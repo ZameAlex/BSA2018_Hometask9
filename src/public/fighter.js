@@ -14,7 +14,9 @@ export default class Fighter{
     }
 
     hit(enemy,point=1){
-        enemy.setDamage(this.power*point);
+        let damage = this.power*point;
+        console.log(`${this.name} hits ${enemy.name} on ${damage} damage!`);
+        enemy.setDamage(damage);
     }
 
     knockout(){
